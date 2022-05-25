@@ -1,0 +1,131 @@
+/* accordion */
+.accordion {
+    max-width: 800px;
+    width:100%;
+    margin: 0 auto;
+    
+}
+.container {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefefd+0,dce3c4+42,aebf76+100;Olive+3D+%231 */
+background: #fefefd; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #fefefd 0%, #dce3c4 42%, #aebf76 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefd', endColorstr='#aebf76',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.accordion-title {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+.fa-solid {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 25px;
+}
+
+.accordion-description {
+    width: 100%;
+    font-size: 20px;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: justify;
+    transition: 0.5s linear;
+}
+.container.active2 .accordion-description {
+    height: 150px;
+}
+.container.active2 .fa-angle-down {
+    transform: rotate(180deg);
+    font-size: 25px;
+}
+
+
+
+
+/* navbar */
+a{
+    color: rgb(61, 128, 72);
+    transition: 0.5s linear;
+}
+
+.navbar-wraper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefefd+0,dce3c4+42,aebf76+100;Olive+3D+%231 */
+background: #fefefd; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #fefefd 0%, #dce3c4 42%, #aebf76 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefd', endColorstr='#aebf76',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+li {
+    margin: 5px;
+}
+.toggle-button {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    font-size: 25px;
+    color:rgb(0, 204, 255);
+    display: none;
+    cursor: pointer;
+}
+.burger-div {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(61, 128, 72);
+    transition: 0.5s linear;
+    
+}
+.div-line2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    .navbar-wraper {
+        flex-direction: column;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .navbar.activeNav {
+        display: block;
+    }
+    .div-line1.activeline1 {
+        transform: translateY(10px) rotate(-45deg);
+        transition: 0.5s;
+    }
+    .div-line2.activeline2 {
+        /* display: none; */
+        transition: 0.8s;
+        opacity: 0;
+    }
+    .div-line3.activeline3{
+        transform: translateY(-10px) rotate(45deg);
+        transition: 0.5s;
+    }
+}
